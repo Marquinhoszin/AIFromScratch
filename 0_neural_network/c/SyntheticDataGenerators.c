@@ -66,7 +66,7 @@ syntheticData* GenerateLinearData (size_t nSamples, size_t nDimensions, float* m
     {
         for (int j = 0; j < nDimensions; j++)
         {
-            linearData->data[(nDimensions*i)+j] = minValues[j] + (i / nDimensions * scaleRange[j]) + ((RandFloat()-0.5)*noiseRange[j]);
+            linearData->data[(nDimensions*i)+j] = minValues[j] + ((float)i / (float)nDimensions * (float)scaleRange[j]) + ((RandFloat()-0.5)*noiseRange[j]);
         }
     }
     return linearData;
